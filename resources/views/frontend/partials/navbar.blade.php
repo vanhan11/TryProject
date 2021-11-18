@@ -1,75 +1,23 @@
-<header class="wrapper pt20 pb20 tbgc1 section-fix header-wrapper fixed-top" style="z-index: 10;">
-    <div class="row">
-        <div class="column large-3 medium-4">
-            <div class="logo component">
-                <a href="{{ route('goreala') }}" class="link">
-                    <img src="{{ URL::to('/assets/img/logogori.png') }}" height="50px" alt="logo" class="">
-                </a>
-            </div>
-        </div>
-        {{-- <div class="column medium-1">
-            <h1>GOREALA</h1>
-        </div> --}}
-        <div class="column large-9 medium-6">
-            <div class="wrapper pt20 pb20 js-menu-container">
-                <nav class="menu component">
-                    <ul class="list inline xsgutter ac">
-                        @if(\Request::route()->getName() == "goreala")
-                        //mulai
-                        <li><a class="link fz2 fw3 ttu ctm link_route" href="#upcoming">UPCOMING</a></li>
-                        <li><a class="link fz2 fw3 ttu ctm link_route" href="#protected">PROTECTED TRIP</a></li>
-                        <li><a class="link fz2 fw3 ttu ctm link_route" href="#programs">PROGRAMS</a></li>
-                        <li><a class="link fz2 fw3 ttu ctm link_route" href="#tours">TOURS</a></li>
-                        <li><a class="link fz2 fw3 ttu ctm link_route" href="#blog">BLOG</a></li>
-                        <li><a class="link fz2 fw3 ttu ctm link_route" href="#testimonials">TESTIMONIALS</a></li>
-                        <li><a class="link fz2 fw3 ttu ctm link_route" href="#contacts">CONTACTS</a></li>
-                        <li>
-                            @if (Sentinel::guest())
-                            <a href="{{ route('login_user') }}" class="link fz2 fw3 ttu ctm">LOGIN/REGISTER</a>
-                            @else
-                            <div class="dropdown">
-                                <a class="link fz2 fw3 ttu ctm dropbtn nav_dropdown" href="javascript:;">
-                                    {{ Sentinel::getUser()->name }}</a>
-                                <div class="dropdown-content">
-                                    <a href="{{ route('profile_user') }}" class="link fz2 fw3 ttu ctm mt5 mb5 ac">
-                                        Profile </a>
-                                    <a class="link fz2 fw3 ttu ctm mt5 mb5 ac" href="{{ route('logout_user') }}">Logout</a>
-                                </div>
-                            </div>
-                            @endif
-                        </li>
-                        //akhir
-                    </ul>
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light ftco-navbar-light-2" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Kusina</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
 
-                        @else
-                        <ul class="list inline xsgutter ar" >
-                        <li><a class="link fz2 fw3 ttu ctm " href="{{ route('goreala') }}">HOME</a></li>    
-                        <li class="ar" >
-                        @if (Sentinel::guest())
-                        {{-- <a href="{{ route('login_user') }}" class=" ar link fz2 fw3 ttu ctm">LOGIN/REGISTER</a> --}}
-                        @else
-                        <div class="dropdown ar">
-                            <a class="link fz2 fw3 ttu ctm dropbtn nav_dropdown" href="javascript:;">
-                                {{ Sentinel::getUser()->name }}</a>
-                            <div class="dropdown-content">
-                                <a href="{{ route('profile_user') }}" class="link fz2 fw3 ttu ctm mt5 mb5 ac">
-                                    Profile </a>
-                                <a class="link fz2 fw3 ttu ctm mt5 mb5 ac" href="{{ route('logout_user') }}">Logout</a>
-                            </div>
-                        </div>
-                        @endif
-                        </li>
-                        </ul>
-                        @endif
-                    
-                    <div class="component menutoggle js-menu-toggle">
-                        <span class="line"></span>
-                    </div>
-                </nav>
-            </div>
-        </div>
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="menu.html" class="nav-link">Specialties</a></li>
+            <li class="nav-item"><a href="reservation.html" class="nav-link">Reservation</a></li>
+            <li class="nav-item active"><a href="blog.html" class="nav-link">Stories</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
     </div>
-</header>
+  </nav>
+<!-- END nav -->
 
 
 {{-- <a class="link fz2 fw3 ttu ctm dropbtn nav_dropdown" href="javascript:;">
